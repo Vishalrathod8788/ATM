@@ -50,10 +50,6 @@ public class ATM
 				System.out.println("\n###################################################################");
 				break;
 			default:
-				
-			case 4:
-				System.exit(0);
-				throw new IllegalArgumentException("Unexpected value: " + choice);
 			}
 		}
 		
