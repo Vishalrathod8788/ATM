@@ -49,7 +49,14 @@ public class ATM
 				System.out.println("Balance : "+ balance);
 				System.out.println("\n###################################################################");
 				break;
+				
+			case 4:
+				System.exit(0);
+				
+				
 			default:
+				throw new IllegalArgumentException("Unexpected value: " + choice);
+			
 			}
 		}
 		
