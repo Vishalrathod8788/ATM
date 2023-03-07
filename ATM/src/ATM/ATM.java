@@ -50,7 +50,14 @@ public class ATM
 		
 		while(true)
 		{
+			System.out.print("\n");
+			System.out.println("Choise 1 For Withdraw");
+			System.out.println("Choise 2 For Deposite");
+			System.out.println("Choise 3 For Balance");
+			System.out.println("Choise 4 For Exit");
+			System.out.println("Enter Any One Number :-");
 			
+						
 		}
 	}
 	
