@@ -46,6 +46,9 @@ public class ATM
 	{
 		ATM A = new ATM();
 		
+		Scanner sc = new Scanner(System.in);
+		
+		
 	}
 	
 }
