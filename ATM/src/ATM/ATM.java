@@ -48,7 +48,10 @@ public class ATM
 		
 		Scanner sc = new Scanner(System.in);
 		
-		
+		while(true)
+		{
+			
+		}
 	}
 	
 }
