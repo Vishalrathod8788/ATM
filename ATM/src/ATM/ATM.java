@@ -24,26 +24,7 @@ public class ATM
 		}
 	}
 	
-	void deposite()
-	{
-		System.out.println("Enter Your Deposite : ");
-		deposite = sc.nextInt();
-		balance = balance + deposite;
-		System.out.print("Your Money Succsessfully Deposite : " + deposite);
-		System.out.print("\n");
-	}
 	
-	void balance()
-	{
-		System.out.print("Your Balance Is : " + balance);
-		System.out.print("\n");
-	}
-	
-	void exit()
-	{
-		System.exit(0);
-		System.out.print("\n");
-	}
 	public static void main(String[] args) 
 	{
 		ATM A = new ATM();
