@@ -31,7 +31,11 @@ public class ATM
 		System.out.print("Your Money Succsessfully Deposite : " + deposite);
 		System.out.print("\n");
 	}
-	
+	void balance()
+	{
+		System.out.print("Your Balance Is : " + balance);
+		System.out.print("\n");
+	}
 	
 	public static void main(String[] args) 
 	{
