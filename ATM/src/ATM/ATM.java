@@ -36,7 +36,12 @@ public class ATM
 		System.out.print("Your Balance Is : " + balance);
 		System.out.print("\n");
 	}
-	
+	void exit()
+	{
+		System.exit(0);
+		System.out.print("\n");
+	}
+
 	public static void main(String[] args) 
 	{
 		ATM A = new ATM();
