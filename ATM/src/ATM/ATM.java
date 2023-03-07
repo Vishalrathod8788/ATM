@@ -4,66 +4,90 @@ import java.util.Scanner;
 
 public class ATM 
 {
-	public ATM() 
+	int balance = 100000, withdraw, deposite;
+	Scanner sc = new Scanner(System.in);
+	
+	void withdraw()
 	{
-		int balance = 100000, withdraw, deposite;
+		if(balance >= deposite)
+		{
+			System.out.print("Enter Your Your Withdraw Money : ");
+			withdraw = sc.nextInt();
+			balance = balance - withdraw;
+			System.out.print("Please Collect Your Money : "+withdraw);
+			System.out.print("\n");
+		}
+		else
+		{
+			System.out.println("Insufficient Balance");
+			System.out.print("\n");
+		}
+	}
+	
+	void deposite()
+	{
+		System.out.println("Enter Your Deposite : ");
+		deposite = sc.nextInt();
+		balance = balance + deposite;
+		System.out.print("Your Money Succsessfully Deposite : " + deposite);
+		System.out.print("\n");
+	}
+	
+	void balance()
+	{
+		System.out.print("Your Balance Is : " + balance);
+		System.out.print("\n");
+	}
+	
+	void exit()
+	{
+		System.exit(0);
+		System.out.print("\n");
+	}
+	public static void main(String[] args) 
+	{
+		ATM A = new ATM();
+		
+		
 		Scanner sc = new Scanner(System.in);
 		
 		while(true)
 		{
-			System.out.println("Automated Taller Machine");
-			System.out.println("Choice 1 for withdraw");
-			System.out.println("Choice 2 for Deposit");
-			System.out.println("Choice 3 for Check Balance");
-			System.out.println("Choice 4 for Exit");
-			System.out.println("Choice the operation you want to perform :");
-			System.out.println("\n###################################################################");
+			System.out.print("\n");
+			System.out.println("Choise 1 For Withdraw");
+			System.out.println("Choise 2 For Deposite");
+			System.out.println("Choise 3 For Balance");
+			System.out.println("Choise 4 For Exit");
+			System.out.println("Enter Any One Number :-");
 			
-			int choice = sc.nextInt();
-			switch (choice) {
-			case 1: 
-				System.out.println("Enter Money to be withdrawn :");
-				withdraw = sc.nextInt();
-				if(balance >= withdraw)
+			int Choise = sc.nextInt();
+			
+			switch (Choise)
+			{
+				case 1: 
 				{
-					balance = balance - withdraw;
-					System.out.println("Please Collact Your Money");
-					System.out.println("\n###################################################################");
+					A.withdraw();
+					break;
 				}
-				else
+				case 2:
 				{
-					System.out.println("Insufficient Balance");
-					System.out.println("\n###################################################################");
+					A.deposite();
+					break;
 				}
-				System.out.println(" ");
-			break;
-			case 2:
-				System.out.println("Enter Money To Be deposited");
-				deposite = sc.nextInt();
-				balance = balance + deposite;
-				System.out.println("Your Money Has Been Successfully Deposited");
-				System.out.println("\n###################################################################");
-				break;
-				
-			case 3:
-				System.out.println("Balance : "+ balance);
-				System.out.println("\n###################################################################");
-				break;
-				
-			case 4:
-				System.exit(0);
-				
-				
+				case 3:
+				{
+					A.balance();
+					break;
+				}
+				case 4:
+				{
+					A.exit();
+					break;
+				}
 			default:
-				throw new IllegalArgumentException("Unexpected value: " + choice);
-			
-			}
+				System.out.println("Unexpected Value: ");
+			}			
 		}
-		
-	}
-	public static void main(String[] args) 
-	{
-		new ATM();
 	}
 	
 }
