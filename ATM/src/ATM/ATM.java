@@ -57,7 +57,33 @@ public class ATM
 			System.out.println("Choise 4 For Exit");
 			System.out.println("Enter Any One Number :-");
 			
-						
+			int Choise = sc.nextInt();
+			
+			switch (Choise)
+			{
+				case 1: 
+				{
+					A.withdraw();
+					break;
+				}
+				case 2:
+				{
+					A.deposite();
+					break;
+				}
+				case 3:
+				{
+					A.balance();
+					break;
+				}
+				case 4:
+				{
+					A.exit();
+					break;
+				}
+			default:
+				System.out.println("Unexpected Value: ");
+			}			
 		}
 	}
 	
